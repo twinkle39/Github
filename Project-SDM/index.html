@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>서대문도서관</title>
+	<!--<link href="favicon.ico" rel="shortcut icon" />-->
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/front.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<!--팝업
+		<div id="popup">
+			<div class="popup">
+				<ul class="popup_lst">
+					<li><a href="#"><img src="images/popup01.jpg" alt="무선 인터넷 서비스 임시 중단 안내" /></a></li>
+					<li><a href="#"><img src="images/popup02.jpg" alt="2018년 1차 희망도서 비치 안내"></a></li>
+					<li><a href="#"><img src="images/popup03.jpg" alt="IT체험실 임시 단축 운영 안내"></a></li>
+					<li><a href="#"><img src="images/popup04.jpg" alt="2018년 1차 청년멘토 모집"></a></li>
+				</ul>
+				<div class="popup_ctrl">
+					<button class="prev_btn"><a href="#"><img src="images/prev.png" alt="이전 버튼"></a></p>
+					<button class="next_btn"><a href="#"><img src="images/next.png" alt="다음 버튼"></a></p>
+					<span class="pop_count"><strong class="count">1</strong></span>
+					<button class="play_btn"><a href="#"><img src="images/pause.png" alt="재생, 멈춤 버튼"></a></p>
+				</div>
+			</div>
+		</div>
+		//팝업-->
+
+		<div id="main">
+			<header id="header">
+					<div class="lnb_bg">
+						<ul class="lnb">
+							<li><a href="#">홈</a></li>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li class="popup_open">
+								<div class="btn_pop_open" style="display: none;"><a href="#popupzone_btn" class="popupzone_btn">팝업존 열기</a></div>
+								<div class="btn_pop_close" style="display: block;"><a href="#popupzone_btn" class="popupzone_btn">팝업존 닫기</a></div>
+								<!-- 팝업존닫기 -->
+							</li>
+						</ul>
+					</div>
+					<div class="gnb_wrap wrapper">
+						<h1 class="logo"><a href="#"><img src="images/logo_c.png" alt="서대문도서관 로고"></a></h1>
+						<nav class="gnb">
+							<ul>
+								<li><a href="#">자료검색</a></li>
+								<li><a href="#">프로그램</a></li>
+								<li><a href="#">열린공간</a></li>
+								<li><a href="#">도서관안내</a></li>
+								<li><a href="#">나의서재</a></li>
+							</ul>
+						</nav>
+					</div>
+			</header>
+
+			<div id="visual">
+					<div class="visual_wrapper">
+						<div class="v_copy">
+							<h2 class="main_copy">책, 세상과 통하다 <strong>서대문도서관</strong></h2>
+							<p class="sub_copy">다함께 더불어 사는 행복한 도서관<br />서대문도서관입니다.</p>
+						</div>
+						<!--검색창-->
+						<div id="search_bar">
+							<h2>통합검색</h2>
+							<form name="searchForm" id="searchTOTAL" action="/main/searchBrief" method="get">
+								<input type="hidden" name="st" value="KWRD">
+								<input type="hidden" name="si" value="TOTAL">
+								<fieldset>
+									<legend>통합검색</legend>
+									<input type="text" class="inp" id="type1q" name="search word" title="검색어 입력" maxlength="2048" value="" placeholder="검색어를 입력하세요" />
+									<input type="submit" class="searchBtn" title="검색" value="검색">
+								</fieldset>
+							</form>
+						</div>
+						<!--//검색창-->
+					</div>
+			</div>
+
+			<div id="container">
+				<!--알림 영역-->
+				<div class="alert">
+					<div class="wrapper">
+						<ul class="con">
+							<li>
+								<h2 class="tit">오늘의 일정</h2>
+					      <p>오늘의 일정이 없습니다.</p>
+								<p class="more"><a href="#"><img src="images/more.png" alt="더보기"></a></p>
+					    </li>
+					    <li>
+					      <h2 class="tit">이달의 휴일</h2>
+					      <ul class="date">
+					        <li>1</li>
+					        <li>8</li>
+					        <li>15</li>
+					        <li>22</li>
+					        <li>29</li>
+					      </ul>
+								<p class="more"><a href="#"><img src="images/more.png" alt="더보기"></a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--공지, SNS 영역-->
+				<div class="notice">
+					<div class="wrapper">
+						<div class="board">
+							<div class="tab_tit clearfix">
+								<h2 class="tab01_tit"><a class="active" href="#tab01" class="on">공지사항</a></h2> <!-- active jquery로 -->
+								<h2 class="tab02_tit"><a href="#tab02">행사 안내</a></h2>
+							</div>
+							<div class="tab tab01">
+								<ul class="tab_lst">
+										<li>
+											<a href="#">2018년 4월 독서문화행사달력 안내</a>
+											<span class="date">2018.03.28</span>
+										</li>
+										<li>
+											<a href="#">[동네책방 도서관네트워크] 스페인 예술로 걷다</a>
+											<span class="date">2018.03.27</span>
+										</li>
+										<li>
+											<a href="#">깨비독서회 회원 모집</a>
+											<span class="date">2018.03.27</span>
+										</li>
+										<li>
+											<a href="#">[전시] 2018년 제1기 교육문화강좌 &lsquo;도예&rsquo; 수강생 작품 전시회</a>
+											<span class="date">2018.03.27</span>
+										</li>
+										<li>
+											<a href="#">2018 북스타트 회원 모집</a>
+											<span class="date">2018.03.24</span>
+										</li>
+										<li>
+											<a href="#">2018년 개관시간 연장사업 기간제 근로자 채용 공고 </a>
+											<span class="date">2018.03.24</span>
+										</li>
+								</ul>
+								<p class="more"><a href="#">공지사항 더보기 &#62;</a></p>
+							</div>
+							<div class="tab tab02">
+								<ul class="tab_lst">
+										<li>
+											<a href="#">2018년 2월 종합자료실 독서왕 선정 알림</a>
+											<span class="date">2018.03.27</span>
+										</li>
+										<li>
+											<a href="#">2018년 2월 종합자료실 베스트 대출도서 안내</a>
+											<span class="date">2018.03.27</span>
+										</li>
+										<li>
+											<a href="#">[가족과함께하는도서관DAY] 3월 &lsquo;책일까? 사탕일까?&rsquo; 행사 안내</a>
+											<span class="date">2018.03.24</span>
+										</li>
+										<li>
+											<a href="#">2018 상반기 &lt;어린이독서토론교실&gt; 안내</a>
+											<span class="date">2018.03.24</span>
+										</li>
+										<li>
+											<a href="#">2018 겨울독서교실 작품 전시회 개최</a>
+											<span class="date">2018.03.16</span>
+										</li>
+										<li>
+											<a href="#">2018년 안산독서회 회원 모집</a>v
+											<span class="date">2018.03.16</span>
+										</li>
+								</ul>
+								<p class="more"><a href="#">행사 안내 더보기 &#62;</a></p>
+							</div>
+						</div> <!--//board-->
+						<!-- SNS -->
+						<div class="snsArea" id="snsArea">
+							<div class="sns">
+
+							</div>
+						</div><!-- //SNS -->
+					</div>
+				</div><!--//notice-->
+
+				<!--주요 서비스 영역-->
+				<div class="wrapper">
+					<div class="service">
+						<div class="svc">
+							<h2>주요서비스 바로가기<span class="svc_txt">서대문도서관의 주요 서비스입니다.</span></h2>
+			  			<ul class="lst" >
+			  				<li class="svc01"><a href="#"><img src="images/s01.svg" alt="원문서비스" /></span><span class="txt">원문서비스</span></a></li>
+			  				<li class="svc02"><a href="#"><img src="images/s02.svg" alt="발간자료" /></span><span class="txt">발간자료</span></a></li>
+			  				<li class="svc03"><a href="#"><img src="images/s03.svg" alt="전자도서관" /></span><span class="txt">전자도서관</span></a></li>
+			  				<li class="svc04"><a href="#"><img src="images/s04.svg" alt="자료 오류신고" /></span><span class="txt">자료 오류신고</span></a></li>
+			  				<li class="svc06"><a href="#"><img src="images/s05.svg" alt="독서보조기기" /></span><span class="txt">독서보조기기</span></a></li>
+			  				<li class="svc07"><a href="#"><img src="images/s06.svg" alt="독서소모임" /></span><span class="txt">독서소모임</span></a></li>
+			  				<li class="svc08"><a href="#"><img src="images/s07.svg" alt="문화강좌 신청" /></span><span class="txt">문화강좌 신청</span></a></li>
+			  			</ul>
+						</div>
+						<div class="mylib">
+							<h2>나의 서재</h2>
+			  			<ul class="myLibList">
+			  				<li class="ml01"><a href="#"><img src="images/ml01.svg" alt="" /><span class="txt">대출조회 / 반납연기</span></a></li>
+			  				<li class="ml02"><a href="#"><img src="images/ml02.svg" alt="" /><span class="txt">도서예약현황</span></a></li>
+			  				<li class="ml03"><a href="#"><img src="images/ml01.svg" alt="" /><span class="txt">희망도서신청내역</span></a></li>
+			  				<li class="ml04"><a href="#"><img src="images/ml02.svg" alt="" /><span class="txt">나만의 맞춤도서</span></a></li>
+			  			</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--도서 추천 영역-->
+				<div class="book">
+				  <div class="wrapper">
+				    <ul class="book_tit clearfix">
+				      <li><!--첫번째 도서 추천 탭-->
+				        <h2 class="title"><a href="#">사서의 소박한 서재</a><span></span></h2>
+				        <ul class="noticeCon">
+				          <li><a href="#"><img src="images/book01.jpg" alt="그해, 여름 손님" /></a></li>
+				          <li><a href="#"><img src="images/book02.jpg" alt="말그릇" /></a></li>
+				          <li><a href="#"><img src="images/book03.jpg" alt="모든 순간이 너였다" /></a></li>
+				          <li><a href="#"><img src="images/book04.jpg" alt="82년생 김지영" /></a></li>
+				        </ul>
+				      </li>
+				      <li><!--두번째 도서 추천 탭-->
+				        <h2 class="title"><a href="#">책 읽는 서대문 한책 읽기</a><span></span></h2>
+				        <ul class="noticeCon">
+				          <li><a href="#"><img src="images/book05.jpg" alt="곰돌이 푸, 행복한 일은 매일 있어" /></a></li>
+				          <li><a href="#"><img src="images/book06.jpg" alt="무례한 사람에게 웃으며 대처하는 법" /></a></li>
+				          <li><a href="#"><img src="images/book07.jpg" alt="엄마의 말하기 연습" /></a></li>
+				          <li><a href="#"><img src="images/book08.jpg" alt="나미야 잡화점의 기적" /></a></li>
+				        </ul>
+				      </li>
+				      <li> <!--세번째 도서 추천 탭-->
+				        <h2 class="title"><a href="#">공공도서관 인기도서</a><span></span></h2>
+				        <ul class="noticeCon">
+				          <li><a href="#"><img src="images/book01.jpg" alt="그해, 여름 손님" /></a></li>
+				          <li><a href="#"><img src="images/book02.jpg" alt="말그릇" /></a></li></p>
+				          <li><a href="#"><img src="images/book03.jpg" alt="모든 순간이 너였다" /></a></li>
+				          <li><a href="#"><img src="images/book04.jpg" alt="82년생 김지영" /></a></li>
+				        </ul>
+				      </li>
+				      <li><!--네번째 도서 추천 탭-->
+				        <h2 class="title"><a href="#">나만의 맞춤도서</a><span></span></h2>
+				        <ul>
+				          <li>키워드 등록 이후 이용 가능합니다</li>
+				        </ul>
+				      </li>
+				    </ul>
+				  </div>
+				</div>
+		  	<!--//도서추천-->
+				<div class="wrapper">
+					<div class="banner">
+						<ul class="banner_lst">
+							<li><a href="#"><img src="images/bn01.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn02.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn03.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn04.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn05.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn06.png" alt="" /></a></li>
+							<li><a href="#"><img src="images/bn07.png" alt="" /></a></li>
+						</ul>
+						<p class="bn_prev"><a href="#"><img src="images/bn_prev.png" alt="이전 버튼" /></a></p>
+						<p class="bn_pause"><a href="#"><img src="images/bn_pause.png" alt="재생, 정지 버튼" /></a></p>
+						<p class="bn_next"><a href="#"><img src="images/bn_next.png" alt="다음 버튼" /></a></p>
+					</div>
+				</div>
+			</div><!--//container-->
+		</div> <!--//main-->
+
+		<footer id="footer">
+			<div class="footer_top">
+				<div class="wrapper">
+					<ul class="link01">
+		        <li><a href="#">이용약관</a></li>
+		        <li class="privacy"><a href="#">개인정보처리방침</a></li>
+		        <li><a href="#">이용규정</a></li>
+		        <li><a href="#">이메일무단수집거부</a></li>
+		        <li><a href="#">찾아오시는 길</a></li>
+		      </ul>
+					<div class="familysite">
+						<span class="btn">
+							<button type="button">관련사이트 바로가기</button>
+						</span>
+						<ul class="site_lst">
+							<li><a href="#" target="_blank" title="새창으로 열림">국립중앙도서관</a></li>
+							<li><a href="#" target="_blank" title="새창으로 열림">서울도서관</a></li>
+							<li><a href="#" target="_blank" title="새창으로 열림">국립장애인도서관</a></li>
+							<li><a href="#" target="_blank" title="새창으로 열림">국립어린이도서관</a></li>
+							<li><a href="#" target="_blank" title="새창으로 열림">한국도서관협회</a></li>
+						</ul>
+					</div>
+					<ul class="link02">
+		        <li><a href="#">소장도서 표준관리시스템</a></li>
+		        <li><a href="#">청년멘토</a></li>
+		      </ul>
+				</div>
+			</div>
+			<div class="footer_info">
+				<div class="wrapper">
+					<h1><img src="images/logo_bw.png" alt="서대문도서관 로고"></h1>
+					<ul class="info">
+			      <li>(우) (03717) 서울 서대문구 모래내로 412(연희동, 서울특별시교육청 서대문도서관)<span class="tel">대표전화  02-6948-2160</span></li>
+			      <li>ⓒ 2018 Seodaemun Public Library. All Rights Reserved.</li>
+			    </ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
